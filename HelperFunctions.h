@@ -62,5 +62,19 @@ std::vector<std::string> ReadStrings(std::string filePath) {
     return output;
 }
 
+std::vector<std::string> SplitString(const std::string& string, const std::string& delim){
+    std::vector<std::string> result;
+    int start = 0;
+    int end = string.find(delim);
+    while (end != std::string::npos)
+    {
+        result.push_back(string.substr(start, end - start));
+        start = end + delim.length();
+        end = string.find(delim, start);
+    }
+    result.push_back(string.substr(start, end - start)); // final word
+    return result;
+}
+
 
 #endif // HELPER_H
