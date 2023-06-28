@@ -67,5 +67,8 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "vector": "cpp"
-    }
+    },
+    "rust-analyzer.linkedProjects": [
+        ".\\rust\\Cargo.toml"
+    ]
 }
